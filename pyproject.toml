@@ -1,0 +1,14 @@
+[project]
+name = "koezeg"
+version = "0.1.0"
+description = "A cow that says things. A practice project for git and GitHub."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+koezeg = "koezeg.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

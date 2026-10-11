@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+
+# Virtual environment (uv maakt die automatisch aan)
+.venv/
+
+# Editors en besturingssystemen
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
