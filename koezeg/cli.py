@@ -5,6 +5,12 @@ import argparse
 from koezeg.bubble import make_bubble
 from koezeg.cowfile import DEFAULT_COW, random_cow, render_cow
 from koezeg.modes import DEFAULT_MODE, MODES
+from rich.console import Console
+
+
+
+# Maak de console instantie aan direct na de imports
+console = Console()
 
 # What the cow says when you give it nothing to say.
 DEFAULT_MESSAGE = "Boe!"
@@ -65,6 +71,10 @@ def main():
 
     # args.mode is None when no mode flag was given.
     mode = MODES.get(args.mode, DEFAULT_MODE)
+    
 
-    print(make_bubble(message))
-    print(render_cow(cow, mode["eyes"], mode["tongue"]))
+    # De tekstballon krijgt nu de gewenste rich opmaak.
+    console.print(make_bubble(message), style="bold cyan")
+
+    # De koe in het bright_magenta.
+    console.print(render_cow(cow, mode["eyes"], mode["tongue"]), style="bright_magenta")
