@@ -73,8 +73,8 @@ def main():
     mode = MODES.get(args.mode, DEFAULT_MODE)
     
 
-    # De tekstballon krijgt nu de gewenste rich opmaak
+    # De tekstballon krijgt nu de gewenste rich opmaak.
     console.print(make_bubble(message), style="bold cyan")
 
-    # De koe in het bright_magenta
+    # De koe in het bright_magenta.
     console.print(render_cow(cow, mode["eyes"], mode["tongue"]), style="bright_magenta")
